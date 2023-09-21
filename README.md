@@ -27,7 +27,7 @@ The GLFW readme provided instructions on statically linking the appropriate '.a'
 
 Additional help came from:
 
-> [how-can-i-run-an-exe-with-dlls-in-separate-directory]](https://stackoverflow.com/questions/5765986/how-can-i-run-an-exe-with-dlls-in-separate-directory)
+> [how-can-i-run-an-exe-with-dlls-in-separate-directory](https://stackoverflow.com/questions/5765986/how-can-i-run-an-exe-with-dlls-in-separate-directory)
 >> first of all there is no need to copy your exe file to your project dir, whereever your .exe file is created when you are debuging your project the running dir would be your project dir. and after that when you are trying to import the dll if you look for it relatively windows first search for that dll in your running dir then then it checks if it can find the dll in the whatever directory defined system PATH variable, but if you check for a absolute address there will be no looking. so the first trick is to set all your dll pathes abslote so that there will be no searching and dll are imported easily but there will be a lot of problems if you want to move your application to another computer (eg HINSTANCE hDLL = LoadLibrary(L"C:\\mydll.DLL");) . second you can give your dll pathes relative to the running dir (not the application path, these 2 may differ) and you can also specify directory for that (eg. HINSTANCE hDLL  LoadLibrary("..\\dlls\\mydll.dll")
 
 > [where-to-place-and-how-to-include-dll-files-in-c-project](https://stackoverflow.com/questions/16064677/where-to-place-and-how-to-include-dll-files-in-c-project)
